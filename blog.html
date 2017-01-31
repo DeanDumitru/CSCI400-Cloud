@@ -39,31 +39,78 @@
     <div id="tooplate_main">
     	<div id="tooplate_content">
             
-<div class="cbox_fw">
-            	<h2>Select an Application from the list</h2>
-				<ul>
-					<li>Fibonacci number calculator</li>
-						<html>
-						<body>
+		<div class="cbox_fw">
+            	<h2>Fibonacci number calculator</h2>
+				<form action="Fibonacci.php" method="post">
+					How many Fibonacci do you want to calculate? <input type="text" name="limit2"><br>						
+					<input type="submit"value="Calculate Numbers!">
+				</form>
 
-						<form action="Fibonacci.php" method="post">
-						How many Fibonacci do you want to calculate? <input type="text" name="limit2"><br>						
-						<input type="submit"value="Calculate Numbers!">
-						</form>
-
-						</body>
-						</html>
-					
-					<li>Multiplication table creator</li>
-					<li>Simple calculator</li>
-					<li>Prime number validator</li>
-					<li>Large prime generator</li>
-					<li>Meme generator</li>
-				</ul>
-                
               <div class="cleaner h10"></div>
                 <p>Posted by <a href="#">Admin</a> | Tags: <a href="#">Cloud</a>, <a href="#">Apps</a> | Date: 27 December 2017</p>
-          </div>        
+		</div> 
+
+		<div class="cbox_fw">
+			<h2>Multiplication table creator</h2>
+			<div class="cleaner h10"></div>
+			
+			<table border="1">
+         
+				<?php 
+				for( $r = 1; $r < 11; $r++)
+				{
+				echo "<tr>";
+					for( $c=1; $c<11; $c++)
+					{
+					($c==$r) ? $bg = "gray" : $bg = "white";
+					echo "<td class='$bg'><a href='#' title='$r x $c = ". $r * $c . " ' >" . $r*$c . "</a></td>" ;
+					}       
+				echo  "</tr>";
+				}        
+				?>
+			
+        </table>
+			
+                <p>Posted by <a href="#">Admin</a> | Tags: <a href="#">Cloud</a>, <a href="#">Apps</a> | Date: 27 December 2017</p>
+		</div>
+		
+		<div class="cbox_fw">
+			<h2>Simple calculator</h2>
+			<form method="post" action="calculator.php">
+			<input type="text" name="value1">
+			<input type="text" name="value2"><select name="action">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			</select>
+			<input type="submit" name="submit" value="Calculate Now"></form>
+			
+			<div class="cleaner h10"></div>
+                <p>Posted by <a href="#">Admin</a> | Tags: <a href="#">Cloud</a>, <a href="#">Apps</a> | Date: 27 December 2017</p>
+		</div>
+		<div class="cbox_fw">
+			<h2>Prime number validator</h2>
+			<form action="PrimeNumber.php" method="post">
+				Enter a number to determine if it is a prime number: <input type="text" name="num" size="10">
+				<input type="submit" value="Check if the number is prime">
+			</form>
+			<div class="cleaner h10"></div>
+                <p>Posted by <a href="#">Admin</a> | Tags: <a href="#">Cloud</a>, <a href="#">Apps</a> | Date: 27 December 2017</p>
+		</div>
+		
+		<div class="cbox_fw">
+			<h2>Large prime generator</h2>
+			<div class="cleaner h10"></div>
+                <p>Posted by <a href="#">Admin</a> | Tags: <a href="#">Cloud</a>, <a href="#">Apps</a> | Date: 27 December 2017</p>
+		</div>
+		
+		<div class="cbox_fw">
+			<h2>Meme generator</h2>
+			<div class="cleaner h10"></div>
+                <p>Posted by <a href="#">Admin</a> | Tags: <a href="#">Cloud</a>, <a href="#">Apps</a> | Date: 27 December 2017</p>
+		</div>
+		
 	  </div> <!-- end of content --> 
         
         <div id="tooplate_sidebar">
