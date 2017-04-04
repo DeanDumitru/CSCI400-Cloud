@@ -1,8 +1,6 @@
-application: newcsci400
-version: 1
 runtime: php55
+vm: true
 api_version: 1
 
-handlers:
-- url: /.*
-  script: index.html
+runtime_config:
+  document_root: web
